@@ -13,5 +13,6 @@ namespace leave_mng.Contracts
         bool Update(T item);
         bool Delete(T item);
         bool Save();
+        bool Exists(int id);
     }
 }

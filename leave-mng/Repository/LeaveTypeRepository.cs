@@ -49,5 +49,11 @@ namespace leave_mng.Repository
         {
             throw new NotImplementedException();
         }
+
+        public bool Exists(int id)
+        {
+            var exists = _db.LeaveTypes.Any(x =>x.Id == id);
+            return exists;
+        }
     }
 }

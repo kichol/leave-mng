@@ -47,5 +47,10 @@ namespace leave_mng.Repository
             return _db.SaveChanges() > 0;
         }
 
+        public bool Exists(int id)
+        {
+            var exists = _db.LeaveHistories.Any(x => x.Id == id);
+            return exists;
+        }
     }
 }
